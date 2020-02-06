@@ -1,0 +1,52 @@
+{
+    "cars": [
+        {
+            "id": 1,
+            "name": "Toyota Corolla 1.6 xei",
+            "model": 1998,
+            "dailyPrice": 150,
+            "isRented": true 
+        },
+        {
+            "id": 2,
+            "name": "Mercedes a180",
+            "model": 2015,
+            "dailyPrice": 250,
+            "isRented": true 
+        },
+        {
+            "id": 3,
+            "name": "Opel Corsa",
+            "model": 2011,
+            "dailyPrice": 200,
+            "isRented": false 
+        }
+    ],
+    "customers": [
+        {
+            "id":1,
+            "carsId": 1,
+            "firstName": "Yasin",
+            "lastName": "Atılkan",
+            "phoneNumber": "05002003010",
+            "active": true
+        },
+        {
+            "id":2,
+            "carsId": 2,
+            "firstName": "Arda",
+            "lastName": "Atılkan",
+            "phoneNumber": "05003005010",
+            "active": true
+        },
+        {
+            "id":2,
+            "carsId": 2,
+            "firstName": "Atakan",
+            "lastName": "Atılkan",
+            "phoneNumber": "04003005010",
+            "active": false
+        }
+
+    ]
+}
