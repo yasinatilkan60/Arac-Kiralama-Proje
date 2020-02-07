@@ -1,4 +1,6 @@
 export default {
     cars: [],
-    customers: []
+    customers: [],
+    currentCar: {},
+    currentCustomer: {}
 }

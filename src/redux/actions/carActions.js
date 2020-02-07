@@ -1,5 +1,9 @@
 import * as actionTypes from "./actionTypes";
 
+export function changeCar(car){
+    return { type: actionTypes.CHANGE_CAR, payload: car};
+}
+
 export function getCarsSuccess(cars) {
     return { type: actionTypes.GET_CARS_SUCCESS, payload: cars};
 }

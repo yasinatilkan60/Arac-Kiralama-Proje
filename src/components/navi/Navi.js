@@ -1,40 +1,34 @@
-import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import React from "react";
+import {Link} from "react-router-dom";
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem
-} from 'reactstrap';
+} from "reactstrap";
 
-const Example = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+export default class Navi extends React.Component {
+  render(){
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand><Link to="/"></Link>Araç Kiralama Sistemi</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+      <Link to="/">Araç Kiralama</Link>
+        <NavbarToggler/>
+        <Collapse navbar>
+          <Nav className="ml-auto" navbar>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 İşlemler
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
-                  Araç ekle
-                </DropdownItem>
-                <DropdownItem>
-                  Müşteri ekle
-                </DropdownItem>
+                <DropdownItem>Araç Ekle / Sil</DropdownItem>
+                <DropdownItem>Araç ekle</DropdownItem>
+                <DropdownItem>Müşteri Ekle / Sil</DropdownItem>
+                <DropdownItem>Müşteri ekle</DropdownItem>
                 <DropdownItem divider />
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -42,7 +36,7 @@ const Example = (props) => {
         </Collapse>
       </Navbar>
     </div>
-  );
+    );
+  }
 }
 
-export default Example;
