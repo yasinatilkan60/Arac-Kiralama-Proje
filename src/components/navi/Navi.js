@@ -25,10 +25,8 @@ export default class Navi extends React.Component {
                 İşlemler
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Araç Ekle / Sil</DropdownItem>
-                <DropdownItem>Araç ekle</DropdownItem>
-                <DropdownItem>Müşteri Ekle / Sil</DropdownItem>
-                <DropdownItem>Müşteri ekle</DropdownItem>
+                <DropdownItem>Araç İşlemleri</DropdownItem>
+                <DropdownItem><Link to="/customers">Müşteri İşlemleri</Link></DropdownItem>
                 <DropdownItem divider />
               </DropdownMenu>
             </UncontrolledDropdown>

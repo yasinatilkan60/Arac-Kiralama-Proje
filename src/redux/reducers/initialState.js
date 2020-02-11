@@ -2,5 +2,6 @@ export default {
     cars: [],
     customers: [],
     currentCar: {},
-    currentCustomer: {}
+    currentCustomer: {},
+    savedCustomer : {}
 }
