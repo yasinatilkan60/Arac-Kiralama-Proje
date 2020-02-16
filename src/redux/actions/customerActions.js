@@ -7,13 +7,19 @@ export function getCustomersSuccess(customers) {
 export function updateCustomerSuccess(customer){
     return { type:actionTypes.UPDATE_CUSTOMER_SUCCESS, payload: customer}
 }
+
 export function createCustomerSuccess(customer){
     return { type:actionTypes.CREATE_CUSTOMER_SUCCESS, payload: customer}
 }
+
+export function getCurrentCustomer(customer){
+    return { type:actionTypes.GET_CURRENT_CUSTOMER, payload: customer}
+}
+
 export function changeCurrentCustomer(customer){
-    console.log(customer);
     return { type:actionTypes.CHANGE_CUSTOMER, payload: customer}
 }
+
 export function getCustomers(customerId){
     return function(dispatch){
         let api = "http://localhost:3000/customers";
@@ -23,6 +29,7 @@ export function getCustomers(customerId){
         .then(res => res.json()).then(result => dispatch(getCustomersSuccess(result)));
     };
 }
+
 // Aşağıdaki fonksiyon json-server rest api kurallarına göre yazılmıştır.
 export function saveCustomerApi(customer){
     let api = "http://localhost:3000/customers" + (customer.id || "");
@@ -32,6 +39,7 @@ export function saveCustomerApi(customer){
         body : JSON.stringify(customer)
     }).then(handleResponse).catch(handleError);
 }
+
 export function saveCustomer(customer) {
     return function(dispatch){
         return saveCustomerApi(customer).then(savedCustomer => {
@@ -41,6 +49,7 @@ export function saveCustomer(customer) {
         })
     }
 }
+
 export async function handleResponse(response) {
     if(response.ok){
         return response.json()
@@ -48,6 +57,7 @@ export async function handleResponse(response) {
     const error = await response.text();
     throw new Error(error); 
 }
+
 export function handleError(error) {
     console.log("Bir hata meydana geldi." + error);
     throw error;

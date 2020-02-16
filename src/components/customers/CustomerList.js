@@ -13,12 +13,15 @@ class CustomerList extends Component {
   selectCustomer = customer => {
     this.props.actions.changeCustomer(customer);
   }
+  clearCurrentCustomer = () => {
+    this.props.actions.changeCustomer({});
+  }
   render() {
     return (
       <div>
         <h3>
           <Badge color="warning">Müşteriler</Badge>
-          <Link className="ml-3" to="/save-customer"><Badge color="success">Müşteri Ekle</Badge></Link>
+          <Link className="ml-3" to="/save-customer"><Button color="success" onClick={() => this.clearCurrentCustomer()}><strong>Müşteri Ekle</strong></Button></Link>
         </h3>
         <Table>
           <thead>
@@ -40,7 +43,7 @@ class CustomerList extends Component {
                 <td>{customer.lastName}</td>
                 <td>{customer.phoneNumber}</td>
                 <td>{customer.active ? "Aktif Müşteri" : "Pasif Müşteri"}</td>
-                <td><Button onClick={() => this.selectCustomer(customer)}></Button></td>
+                <td><Link className="ml-3" to="/save-customer"><Button color="warning" onClick={() => this.selectCustomer(customer)}><strong>Güncelle</strong></Button></Link></td>
               </tr>
             ))}
           </tbody>
@@ -58,7 +61,7 @@ function mapDispatchToProps(dispatch) {
   return {
     actions: {
       getCustomers: bindActionCreators(customerActions.getCustomers, dispatch),
-      changeCustomer: bindActionCreators(customerActions.changeCurrentCustomer, dispatch),
+      changeCustomer: bindActionCreators(customerActions.changeCurrentCustomer, dispatch)
     }
   };
 }
