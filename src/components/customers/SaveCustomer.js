@@ -8,19 +8,11 @@ class SaveCustomer extends Component {
   componentDidMount() {
     this.props.actions.getCurrentCustomer();
   }
-  myChangeHandler = (event) => {
-    let nam = event.target.name;
-    let val = event.target.value;
-    this.setState({[nam]: val});
-  }
-  yazdir = customer => {
-    console.log(customer);
-  }
   
   render() {
     return (
       <div>
-        <Form onSubmit={this.yazdir(this.props.customer)}>
+        <Form>
           <FormGroup>
             <Label>Adı</Label>
             <Input placeholder="Müşteri Adı" defaultValue={this.props.customer.firstName}/>
