@@ -20,6 +20,13 @@
       "model": 2011,
       "dailyPrice": 200,
       "isRented": false
+    },
+    {
+      "name": "Opel Corsa 2",
+      "model": 2018,
+      "dailyPrice": 200,
+      "isRented": false,
+      "id": 6
     }
   ],
   "customers": [

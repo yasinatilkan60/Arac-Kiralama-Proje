@@ -5,13 +5,15 @@ import customerListReducer from "./customerListReducer";
 import changeCarReducer from "./changeCarReducer";
 import changeCustomerReducer from "./changeCustomerReducer";
 import currentCustomerReducer from "./currentCustomerReducer";
+import currentCarReducer from "./currentCarReducer";
 
 const rootReducer = combineReducers ({
     carListReducer,
     customerListReducer,
     changeCarReducer,
     changeCustomerReducer,
-    currentCustomerReducer
+    currentCustomerReducer,
+    currentCarReducer
 })
 
 export default rootReducer;

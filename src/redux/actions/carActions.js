@@ -7,6 +7,9 @@ export function changeCar(car){
 export function getCarsSuccess(cars) {
     return { type: actionTypes.GET_CARS_SUCCESS, payload: cars};
 }
+export function getCurrentCar(car){
+    return { type:actionTypes.GET_CURRENT_CAR, payload: car}
+}
 
 export function getCars(carId){
     return function(dispatch){
@@ -17,3 +20,4 @@ export function getCars(carId){
         .then(res => res.json()).then(result => dispatch(getCarsSuccess(result)));
     };
 }
+

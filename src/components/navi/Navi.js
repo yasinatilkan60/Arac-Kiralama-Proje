@@ -25,7 +25,7 @@ export default class Navi extends React.Component {
                 İşlemler
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Araç İşlemleri</DropdownItem>
+                <DropdownItem><Link to="/cars">Araç İşlemleri</Link></DropdownItem>
                 <DropdownItem><Link to="/customers">Müşteri İşlemleri</Link></DropdownItem>
                 <DropdownItem divider />
               </DropdownMenu>
