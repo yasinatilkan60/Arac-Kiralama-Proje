@@ -12,29 +12,36 @@
       "name": "Mercedes a180",
       "model": 2015,
       "dailyPrice": 250,
-      "isRented": true
+      "isRented": false
     },
     {
       "id": 3,
       "name": "Opel Corsa",
       "model": 2011,
       "dailyPrice": 200,
-      "isRented": false
+      "isRented": true
     },
     {
       "name": "Opel Corsa 2",
       "model": 2018,
       "dailyPrice": 200,
-      "isRented": false,
+      "isRented": true,
       "id": 6
+    },
+    {
+      "id": 9,
+      "name": "Mercedes c180",
+      "model": 2011,
+      "dailyPrice": 200,
+      "isRented": true
     }
   ],
   "customers": [
     {
       "id": 1,
       "carsId": 1,
-      "firstName": "Yasin",
-      "lastName": "Atılkan",
+      "firstName": "Yasinnnn",
+      "lastName": "Atılkannn",
       "phoneNumber": "05002003010",
       "active": true
     },

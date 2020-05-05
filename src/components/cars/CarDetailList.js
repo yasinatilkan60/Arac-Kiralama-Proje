@@ -31,7 +31,6 @@ class CarDetailList extends Component {
               <th>Günlük Fiyat</th>
               <th>Durum</th>
               <th></th>
-              <th></th>
             </tr>
           </thead>
           <tbody>

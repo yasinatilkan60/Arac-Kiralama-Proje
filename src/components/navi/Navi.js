@@ -15,7 +15,7 @@ export default class Navi extends React.Component {
   render(){
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="light" light expand="md" className="mt-3">
       <Link to="/">Araç Kiralama</Link>
         <NavbarToggler/>
         <Collapse navbar>

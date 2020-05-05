@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <Container>
-        <Navi/>
+        <Navi />
         <Switch>
           <Route path="/" exact component = {Dashboard}></Route>
           <Route path="/customers" component = {CustomerList}></Route>

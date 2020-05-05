@@ -17,7 +17,7 @@ class CarList extends Component {
                     <Badge color="success">Hazır Araçlar</Badge>
                 </h2>
                 <ListGroup>
-                    {this.props.cars.filter(car => car.isRented).map(car => (
+                    {this.props.cars.filter(car => !car.isRented).map(car => (
                         <ListGroupItem key={car.id} active={car.id === this.props.currentCar.id}onClick={()=> this.selectCar(car)} >
                             {car.name}
                         </ListGroupItem>
@@ -27,7 +27,7 @@ class CarList extends Component {
                     <Badge color="success">Kiralanmış Araçlar</Badge>
                 </h2>
                 <ListGroup>
-                    {this.props.cars.filter(car => !car.isRented).map(car => (
+                    {this.props.cars.filter(car => car.isRented).map(car => (
                         <ListGroupItem key={car.id} active={car.id === this.props.currentCar.id}onClick={()=> this.selectCar(car)} >
                             {car.name}
                         </ListGroupItem>
