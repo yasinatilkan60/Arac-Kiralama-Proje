@@ -21,7 +21,7 @@ export function getCars(carId) {
   };
 }
 export function saveCarApi(car) {
-  return function () {
+  
     let api = "http://localhost:3000/cars/" + (car.id || "");
     return fetch(api, {
       method: car.id ? "PUT" : "POST",
@@ -30,6 +30,10 @@ export function saveCarApi(car) {
     })
       .then(handleResponse)
       .catch(handleError);
+}
+export function saveCar(car) {
+  return function (dispatch) {
+    return saveCarApi(car).then(dispatch(getCars())).catch(error => {throw error;})
   };
 }
 export async function handleResponse(response) {

@@ -2,64 +2,50 @@
   "cars": [
     {
       "id": 1,
+      "customersId": 0,
       "name": "Toyota Corolla 1.6 xei",
+      "image": "toyota",
       "model": 1998,
       "dailyPrice": 150,
-      "isRented": true
+      "isRented": false
     },
     {
       "id": 2,
-      "name": "Mercedes a180",
+      "customersId": 0,
+      "name": "mercedes",
+      "image": "mercedes",
       "model": 2015,
       "dailyPrice": 250,
       "isRented": false
     },
     {
       "id": 3,
+      "customersId": 0,
       "name": "Opel Corsa",
+      "image": "opel",
       "model": 2011,
       "dailyPrice": 200,
-      "isRented": true
-    },
-    {
-      "name": "Opel Corsa 2",
-      "model": 2018,
-      "dailyPrice": 200,
-      "isRented": true,
-      "id": 6
-    },
-    {
-      "id": 9,
-      "name": "Mercedes c180",
-      "model": 2011,
-      "dailyPrice": 200,
-      "isRented": true
+      "isRented": false
     }
   ],
   "customers": [
     {
       "id": 1,
-      "carsId": 1,
-      "firstName": "Yasinnnn",
-      "lastName": "Atılkannn",
-      "phoneNumber": "05002003010",
-      "active": true
+      "firstName": "Yasin",
+      "lastName": "Atılkan",
+      "phoneNumber": "05002003010"
     },
     {
       "id": 2,
-      "carsId": 2,
       "firstName": "Arda",
       "lastName": "Atılkan",
-      "phoneNumber": "05003005010",
-      "active": true
+      "phoneNumber": "05003005010"
     },
     {
       "id": 3,
-      "carsId": 2,
       "firstName": "Atakan",
       "lastName": "Atılkan",
-      "phoneNumber": "04003005010",
-      "active": false
+      "phoneNumber": "04003005010"
     }
   ]
 }

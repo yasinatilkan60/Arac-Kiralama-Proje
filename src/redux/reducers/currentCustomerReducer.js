@@ -7,6 +7,7 @@ export default function currentCustomerReducer(
 ) {
   switch (action.type) {
     case actionTypes.CHANGE_CUSTOMER:
+      console.log(action.payload);
       return action.payload;
     case actionTypes.GET_CURRENT_CUSTOMER:
       return state;

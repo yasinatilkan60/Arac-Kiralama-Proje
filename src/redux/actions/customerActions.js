@@ -32,7 +32,7 @@ export function getCustomers(customerId){
 
 // Aşağıdaki fonksiyon json-server rest api kurallarına göre yazılmıştır.
 export function saveCustomerApi(customer){
-    let api = "http://localhost:3000/customers" + (customer.id || "");
+    let api = "http://localhost:3000/customers/" + (customer.id || "");
     return fetch(api , {
         method: customer.id ? "PUT" : "POST",
         headers : {"content-type":"application/json"},
@@ -51,6 +51,7 @@ export function saveCustomer(customer) {
 }
 
 export async function handleResponse(response) {
+    console.log(response.ok);
     if(response.ok){
         return response.json()
     }
