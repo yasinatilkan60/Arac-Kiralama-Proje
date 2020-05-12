@@ -3,27 +3,27 @@
     {
       "id": 1,
       "customersId": 0,
-      "name": "Toyota Corolla 1.6 xei",
       "image": "toyota",
-      "model": 1998,
-      "dailyPrice": 150,
+      "name": "Toyota Coralla ",
+      "model": "2000",
+      "dailyPrice": "225",
       "isRented": false
     },
     {
       "id": 2,
-      "customersId": 0,
-      "name": "mercedes",
+      "customersId": 1,
       "image": "mercedes",
+      "name": "Mercedes",
       "model": 2015,
       "dailyPrice": 250,
-      "isRented": false
+      "isRented": true
     },
     {
       "id": 3,
       "customersId": 0,
-      "name": "Opel Corsa",
       "image": "opel",
-      "model": 2011,
+      "name": "Opel Corsa",
+      "model": "2013",
       "dailyPrice": 200,
       "isRented": false
     }

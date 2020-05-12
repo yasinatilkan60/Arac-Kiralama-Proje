@@ -5,6 +5,7 @@ import * as carActions from "../../redux/actions/carActions";
 import { Badge, Button } from 'reactstrap';
 import { Table } from "reactstrap";
 import {Link} from "react-router-dom";
+import Image from 'react-bootstrap/Image';
 class CarDetailList extends Component {
     componentDidMount() {
         this.props.actions.getCars();
@@ -26,6 +27,7 @@ class CarDetailList extends Component {
           <thead>
             <tr>
               <th>#</th>
+              <th>Resim</th>
               <th>Ad</th>
               <th>Model</th>
               <th>Günlük Fiyat</th>
@@ -37,6 +39,7 @@ class CarDetailList extends Component {
             {this.props.cars.map(car => (
               <tr key={car.id}>
                 <th scope="row">{car.id}</th>
+                <td><Image width="100" src={require('../../img/'+car.image+".png")} alt="value"/></td>
                 <td>{car.name}</td>
                 <td>{car.model}</td>
                 <td>{car.dailyPrice}</td>

@@ -15,7 +15,7 @@ import {
   Row,
   Col
 } from "reactstrap";
-import Image from 'react-bootstrap/Image'
+import Image from 'react-bootstrap/Image';
 import alertify from "alertifyjs";
 class CarOperations extends Component {
   componentDidMount() {
@@ -168,7 +168,7 @@ class CarOperations extends Component {
               </Col>
               <Col xs="4" >
                 {this.props.currentCar.name && 
-                <Image width="400" src={require('../../img/default.png')} alt="value"/>}
+                <Image width="400" src={require('../../img/'+this.props.currentCar.image+".png")} alt="value"/>}
               </Col>
             </Row>
           </Container>
