@@ -21,7 +21,7 @@ class CarDetailList extends Component {
             <div>
         <h3>
           <Badge color="warning">Arabalar</Badge>
-          <Link className="ml-3" to="/save-car"><Button color="success" onClick={() => this.clearCurrentCar()}><strong>Araba ekle</strong></Button></Link>
+          <Link className="ml-3" to="/add-car"><Button color="success" onClick={() => this.clearCurrentCar()}><strong>Araba ekle</strong></Button></Link>
         </h3>
         <Table>
           <thead>

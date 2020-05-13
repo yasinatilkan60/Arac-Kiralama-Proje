@@ -4,19 +4,19 @@
       "id": 1,
       "customersId": 0,
       "image": "toyota",
-      "name": "Toyota Coralla ",
-      "model": "2000",
-      "dailyPrice": "225",
+      "name": "Toyota Coralla",
+      "model": "1998",
+      "dailyPrice": "165",
       "isRented": false
     },
     {
       "id": 2,
-      "customersId": 1,
+      "customersId": 0,
       "image": "mercedes",
       "name": "Mercedes",
       "model": 2015,
-      "dailyPrice": 250,
-      "isRented": true
+      "dailyPrice": "300",
+      "isRented": false
     },
     {
       "id": 3,
@@ -26,6 +26,24 @@
       "model": "2013",
       "dailyPrice": 200,
       "isRented": false
+    },
+    {
+      "customersId": 0,
+      "name": "volvo s60",
+      "image": "volvo",
+      "model": 2013,
+      "dailyPrice": 250,
+      "isRented": false,
+      "id": 4
+    },
+    {
+      "customersId": 0,
+      "image": "renault",
+      "name": "Renault",
+      "model": "2002",
+      "dailyPrice": "100",
+      "isRented": false,
+      "id": 5
     }
   ],
   "customers": [

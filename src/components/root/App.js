@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom";
 import CustomerList from '../customers/CustomerList';
 import SaveCustomer from '../customers/SaveCustomer';
 import SaveCar from '../cars/SaveCar';
+import AddCar from '../cars/AddCar';
 import CarDetailList from '../cars/CarDetailList';
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/cars" component = {CarDetailList}></Route>
           <Route path="/save-customer" component = {SaveCustomer}></Route>
           <Route path="/save-car" component = {SaveCar}></Route>
+          <Route path="/add-car" component = {AddCar}></Route>
           <Route component={NotFound} />
         </Switch>
       </Container>

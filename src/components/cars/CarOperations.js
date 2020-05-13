@@ -188,7 +188,6 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     actions: {
-      changeCar: bindActionCreators(carActions.changeCar, dispatch),
       getCustomers: bindActionCreators(customerActions.getCustomers, dispatch),
       saveCar: bindActionCreators(carActions.saveCar, dispatch),
       getCars: bindActionCreators(carActions.getCars, dispatch),
