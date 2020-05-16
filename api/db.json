@@ -2,30 +2,30 @@
   "cars": [
     {
       "id": 1,
-      "customers_Id": 0,
+      "customers_Id": 1,
       "image": "toyota",
       "name": "Toyota Coralla",
       "model": "1998",
       "dailyPrice": "165",
-      "isRented": false
+      "isRented": true
     },
     {
       "id": 2,
       "customers_Id": 0,
       "image": "mercedes",
       "name": "Mercedes",
-      "model": 2015,
+      "model": "2017",
       "dailyPrice": "300",
       "isRented": false
     },
     {
       "id": 3,
-      "customers_Id": 0,
+      "customers_Id": 2,
       "image": "opel",
       "name": "Opel Corsa",
       "model": "2013",
       "dailyPrice": 200,
-      "isRented": false
+      "isRented": true
     },
     {
       "customers_Id": 0,

@@ -28,3 +28,11 @@ Projenin çalıştırılması için gerekli komutlar;
 ##### Müşteri Güncelleme
 
 ![Image](customerUpdate.PNG)
+
+## Projeye Eklenmesi Planlanan Özellikler
+
+- Araç kiralama ve iade alma tarihlerinin sisteme dahil edilmesi, kiralama ve iade süreleri arasındaki fark ile toplam ücretin hesaplanması.
+
+- Araba eklerken resim ekleme işleminin text yerine upload işlemi ile gerçekleştirilmesi.
+
+- Müşteri veya araba ekleme ya da güncelleme işlemlerinde validasyon işlemlerinin gerçekleştirilmesi.
