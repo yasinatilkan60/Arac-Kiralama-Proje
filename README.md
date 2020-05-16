@@ -13,3 +13,18 @@ Projenin çalıştırılması için gerekli komutlar;
     npm start
 ```
 
+##### Ana Sayfa
+
+![Image](../main.PNG)
+
+##### Araba Listesi
+
+![Image](../cars.PNG)
+
+##### Müşteri Listesi
+
+![Image](../customers.PNG)
+
+##### Müşteri Güncelleme
+
+![Image](../customerUpdate.PNG)
