@@ -13,9 +13,9 @@ import {
   FormGroup,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
-import Image from 'react-bootstrap/Image';
+import Image from "react-bootstrap/Image";
 import alertify from "alertifyjs";
 class CarOperations extends Component {
   componentDidMount() {
@@ -49,7 +49,7 @@ class CarOperations extends Component {
   };
   rentCar = (car, customer) => {
     car.isRented = true;
-    car.customersId = customer.id;
+    car.customers_Id = customer.id;
     this.props.actions.saveCar(car);
     this.props.actions.getCars();
     this.setState({ dropDownValue: "Müşteri" });
@@ -57,7 +57,7 @@ class CarOperations extends Component {
   };
   getCar = (car) => {
     car.isRented = false;
-    car.customersId = 0;
+    car.customers_Id = 0;
     this.props.actions.saveCar(car);
     this.props.actions.getCars();
     this.setState({ dropDownValue: "Müşteri" });
@@ -126,7 +126,7 @@ class CarOperations extends Component {
                         <Button
                           disabled={
                             !this.props.currentCar.name ||
-                            !this.props.currentCustomer.firstName
+                            this.state.dropDownValue === "Müşteri"
                           }
                           color="success"
                           onClick={() =>
@@ -136,7 +136,7 @@ class CarOperations extends Component {
                             )
                           }
                         >
-                          Kirala
+                          <strong>Kirala</strong>
                         </Button>
                       </div>
                     ) : (
@@ -145,7 +145,7 @@ class CarOperations extends Component {
                           <strong>Müşteri:</strong>{" "}
                           {this.props.customerList
                             .filter(
-                              (i) => i.id === this.props.currentCar.customersId
+                              (i) => i.id === this.props.currentCar.customers_Id
                             )
                             .map((a) => (
                               <label key={a.id}>
@@ -158,7 +158,7 @@ class CarOperations extends Component {
                             color="warning"
                             onClick={() => this.getCar(this.props.currentCar)}
                           >
-                            İade al
+                            <strong>İade al</strong>
                           </Button>
                         </div>
                       </div>
@@ -166,9 +166,16 @@ class CarOperations extends Component {
                   </div>
                 </div>
               </Col>
-              <Col xs="4" >
-                {this.props.currentCar.name && 
-                <Image width="400" src={require('../../img/'+this.props.currentCar.image+".png")} alt="value"/>}
+              <Col xs="4">
+                {this.props.currentCar.name && (
+                  <Image
+                    width="400"
+                    src={require("../../img/" +
+                      this.props.currentCar.image +
+                      ".png")}
+                    alt="value"
+                  />
+                )}
               </Col>
             </Row>
           </Container>

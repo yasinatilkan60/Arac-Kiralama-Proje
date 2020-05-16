@@ -25,7 +25,7 @@ class SaveCar extends Component {
   handleClick(){
     let payload={
       "id":this.props.car.id,
-      "customersId":this.props.car.customersId,
+      "customers_Id":this.props.car.customers_Id,
       "image":this.props.car.image,
       "name":this.state.name,
       "model":this.state.model,

@@ -4,14 +4,6 @@ export function getCustomersSuccess(customers) {
     return { type: actionTypes.GET_CUSTOMERS_SUCCESS, payload: customers};
 }
 
-export function updateCustomerSuccess(customer){
-    return { type:actionTypes.UPDATE_CUSTOMER_SUCCESS, payload: customer}
-}
-
-export function createCustomerSuccess(customer){
-    return { type:actionTypes.CREATE_CUSTOMER_SUCCESS, payload: customer}
-}
-
 export function getCurrentCustomer(customer){
     return { type:actionTypes.GET_CURRENT_CUSTOMER, payload: customer}
 }
@@ -42,9 +34,20 @@ export function saveCustomerApi(customer){
 
 export function saveCustomer(customer) {
     return function(dispatch){
-        return saveCustomerApi(customer).then(savedCustomer => {
-            customer.id?dispatch(updateCustomerSuccess(savedCustomer)):dispatch(createCustomerSuccess(savedCustomer))
-        }).catch(error => {
+        return saveCustomerApi(customer).then(dispatch(getCustomers())).catch(error => {
+            throw error;
+        })
+    }
+}
+export function deleteCustomerApi(customer){
+    let api = "http://localhost:3000/customers/" + (customer.id);
+    return fetch(api , {
+        method: "DELETE"
+    }).then(handleResponse).catch(handleError);
+}
+export function deleteCustomer(customer) {
+    return function(dispatch){
+        return deleteCustomerApi(customer).then(dispatch(getCustomers())).catch(error => {
             throw error;
         })
     }

@@ -36,6 +36,20 @@ export function saveCar(car) {
     return saveCarApi(car).then(dispatch(getCars())).catch(error => {throw error;})
   };
 }
+
+export function deleteCarApi(car){
+  let api = "http://localhost:3000/cars/" + (car.id);
+  return fetch(api , {
+      method: "DELETE"
+  }).then(handleResponse).catch(handleError);
+}
+export function deleteCar(car) {
+  return function(dispatch){
+      return deleteCarApi(car).then(dispatch(getCars())).catch(error => {
+          throw error;
+      })
+  }
+}
 export async function handleResponse(response) {
   console.log(response.ok);
   if (response.ok) {

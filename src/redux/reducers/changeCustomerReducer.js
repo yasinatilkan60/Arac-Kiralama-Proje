@@ -6,9 +6,7 @@ export default function changeCustomerReducer(
     action
   ) {
     switch (action.type) {
-      case actionTypes.UPDATE_CUSTOMER_SUCCESS:
-        return action.payload;
-      case actionTypes.CREATE_CUSTOMER_SUCCESS:
+      case actionTypes.CHANGE_CUSTOMER:
         return action.payload;
       default:
         return state;

@@ -1,7 +1,7 @@
 
 ## Araç Kiralama Sistemi
 
-Proje tamamlandığında araç kiralama, iade alma, ekleme, silme ve güncelleme işlemlerini ve müşteriler ile ilgili ekleme, silme ve güncelleme işlemlerini gerçekleştirecektir.
+Proje araç kiralama, iade alma, ekleme, silme ve güncelleme işlemlerini ve müşteriler ile ilgili ekleme, silme ve güncelleme işlemlerini içermektedir.
 
 Projenin çalıştırılması için gerekli komutlar;
 
@@ -12,3 +12,4 @@ Projenin çalıştırılması için gerekli komutlar;
     npm install
     npm start
 ```
+
