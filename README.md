@@ -16,23 +16,23 @@ Projenin çalıştırılması için gerekli komutlar;
 ##### Ana Sayfa
 
 <p>
-    <img src="../main.PNG" width="220" height="240" />
+    <img src="./main.PNG" />
 </p>
 
 ##### Araba Listesi
 
 <p>
-    <img src="../cars.PNG" width="220" height="240" />
+    <img src="./cars.PNG" />
 </p>
 
 ##### Müşteri Listesi
 
 <p>
-    <img src="../customers.PNG" width="220" height="240" />
+    <img src="./customers.PNG"/>
 </p>
 
 ##### Müşteri Güncelleme
 
 <p>
-    <img src="../customerUpdate.PNG" width="220" height="240" />
+    <img src="./customerUpdate.PNG"/>
 </p>
